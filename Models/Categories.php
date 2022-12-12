@@ -1,12 +1,10 @@
 <?php
 class Categories
 {
-    public $cats;
-    public $dogs;
+    public $category;
 
-    public function __construct($cats, $dogs)
+    public function __construct($category)
     {
-        $this->cats = $cats;
-        $this->dogs = $dogs;
+        $this->category = $category;
     }
 }

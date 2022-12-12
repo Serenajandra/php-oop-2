@@ -12,12 +12,12 @@ class Products
     public function __construct(String $title, Categories $category, String $price)
     {
         $this->title = $title;
-        $this->categoria = $category;
+        $this->category = $category;
         $this->price = $price;
     }
 
     public function getDetails()
     {
-        return "Nome: {$this->title}, Categoria: {$this->categoria}, Prezzo: {$this->price}";
+        return "Nome: {$this->title}, Categoria: {$this->category?->category}, Prezzo: {$this->price}";
     }
 }
