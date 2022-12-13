@@ -32,8 +32,8 @@ require_once __DIR__ . "/Database/database.php"
                 <?php foreach ($Products as $product) { ?>
                     <div class="col">
                         <div class="card">
-                            <img src="<?php echo $product->image; ?>">
-                            <div class="card-body"> -->
+                            <img class="card-img-top" src="<?php echo $product->image; ?>">
+                            <div class="card-body">
                                 <h2><?php echo $product->getTitle(); ?></h2>
                                 <p class="card-text">
                                     <?php echo $product->getPrice() ?> minutes
@@ -41,7 +41,7 @@ require_once __DIR__ . "/Database/database.php"
                                 <p class="card-text">
                                     Categoria: <?php echo $product->getCategory(); ?>
                                 </p>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 <?php } ?>
