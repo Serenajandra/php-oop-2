@@ -8,7 +8,7 @@ class Toys extends Products
     // public $forTeeths;
     // public $training;
 
-    public function __construct(string $image, String $title, Categories $category, String $price, string $type, string $madeOf)
+    public function __construct(string $image, String $title, Categories $category, float $price, string $type, string $madeOf)
     {
         parent::__construct($image, $title, $category, $price);
         $this->type = $type;

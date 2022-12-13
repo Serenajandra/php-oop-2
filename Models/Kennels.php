@@ -6,7 +6,7 @@ class Kennels extends Products
     public $size;
     public $madeOf;
 
-    public function __construct(string $image, String $title, Categories $category, String $price, string $size, string $madeOf)
+    public function __construct(string $image, String $title, Categories $category, float $price, string $size, string $madeOf)
     {
         parent::__construct($image, $title, $category, $price);
         $this->size = $size;

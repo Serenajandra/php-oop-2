@@ -8,7 +8,33 @@ require_once __DIR__ . "/Models/Categories.php";
 require_once __DIR__ . "/Models/Food.php";
 require_once __DIR__ . "/Models/Kennels.php";
 require_once __DIR__ . "/Models/Toys.php";
-require_once __DIR__ . "/Database/database.php"
+require_once __DIR__ . "/Database/database.php";
+require_once __DIR__ . "/Models/Customer.php";
+require_once __DIR__ . "/Models/ShoppingBasket.php";
+require_once __DIR__ . "/Models/creditCard.php";
+
+// customer
+// account
+// shopping basket
+// credit card
+
+// creare un cliente ospite sensa account
+// aggiunta dei prodotti nel carrello
+// calcolare il totale del carrello
+// fare pagameto con carta di credito
+
+$guest = new Customer("Serena", "serena@gmail.com", new ShoppingBasket());
+$guest->basket->add($KennelXxl);
+$guest->basket->add($kennelSmall);
+$total = $guest->basket->getTotal();
+var_dump($total);
+
+// Per il pagamento:
+$guest->insertCreditCard(new CreditCard("123456789", "123", "12", "2022"));
+var_dump($guest);
+$result = $guest->toPay($total);
+var_dump($result);
+
 ?>
 
 <!DOCTYPE html>

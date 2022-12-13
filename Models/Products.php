@@ -10,7 +10,7 @@ class Products
 
     // public $icon;
 
-    public function __construct(string $image, String $title, Categories $category, String $price)
+    public function __construct(string $image, String $title, Categories $category, float $price)
     {
 
         $this->image = $image;
