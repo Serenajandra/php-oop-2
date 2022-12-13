@@ -41,6 +41,20 @@ require_once __DIR__ . "/Database/database.php"
                                 <p class="card-text">
                                     Categoria: <?php echo $product->getCategory(); ?>
                                 </p>
+                                <?php if (get_class($product) === "Food") { ?>
+                                    <p class="card-text">Tipologia: <?php echo $product->type ?></p>
+                                    <p class="card-text">Ingredienti: <?php echo $product->ingredients ?></p>
+                                    <p class="card-text">Data di scadenza: <?php echo $product->expirationDate ?></p>
+                                <?php }
+                                if (get_class($product) === "Toys") { ?>
+                                    <p class="card-text">Tipologia: <?php echo $product->type ?></p>
+                                <?php }
+                                if (get_class($product) === "Kennels") { ?>
+                                    <p class="card-text">Misura: <?php echo $product->size ?></p>
+                                <?php }
+                                if (get_class($product) === "Kennels" || get_class($product) === "Toys") { ?>
+                                    <p class="card-text">Materiale: <?php echo $product->madeOf ?></p>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>

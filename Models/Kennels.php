@@ -1,9 +1,15 @@
 <?
-class kennels extends Products
+require_once __DIR__ . "/Products.php";
+
+class Kennels extends Products
 {
-    public $madeOf;
     public $size;
-    // public $plasticKennels;
-    // public $woodenKennels;
-    // public $cage;
+    public $madeOf;
+
+    public function __construct(string $image, String $title, Categories $category, String $price, string $size, string $madeOf)
+    {
+        parent::__construct($image, $title, $category, $price);
+        $this->size = $size;
+        $this->madeOf = $madeOf;
+    }
 }
