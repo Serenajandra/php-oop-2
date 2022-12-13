@@ -36,7 +36,7 @@ require_once __DIR__ . "/Database/database.php"
                             <div class="card-body">
                                 <h2><?php echo $product->getTitle(); ?></h2>
                                 <p class="card-text">
-                                    <?php echo $product->getPrice() ?> minutes
+                                    <?php echo $product->getPrice() ?>
                                 </p>
                                 <p class="card-text">
                                     Categoria: <?php echo $product->getCategory(); ?>
