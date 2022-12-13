@@ -19,10 +19,10 @@ class Products
         $this->price = $price;
     }
 
-    public function getDetails()
-    {
-        return "Nome: {$this->title}, Categoria: {$this->category?->category}, Prezzo: {$this->price}";
-    }
+    // public function getDetails()
+    // {
+    //     return "Nome: {$this->title}, Categoria: {$this->category?->category}, Prezzo: {$this->price}";
+    // }
     public function getTitle()
     {
         return $this->title;
